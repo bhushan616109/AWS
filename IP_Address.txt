@@ -1,0 +1,53 @@
+  
+  
+🔰What is an IP Address? 
+
+An IP address, or Internet Protocol address, is a unique string of numbers assigned to each device connected to a computer network that uses the Internet Protocol 
+for communication. It serves as an identifier that allows devices to send and receive data over the network, ensuring that this data reaches the correct destination.
+
+
+☑️Types of IP Address
+IP addresses can be classified in several ways based on their structure, purpose, and the type of network they are used in. Here’s a breakdown of the different classifications of IP addresses:
+
+1. Based on Addressing Scheme (IPv4 vs. IPv6)
+
+➡️IPv4:
+This is the most common form of IP Address. It consists of four sets of numbers separated by dots. For example, 192.158.1.38. Each set of numbers can range from 0 to 255. This format can support over 4 billion unique addresses. Here’s how the structure is broken down:
+
+Four Octets: Each octet represents eight bits, or a byte, and can take a value from 0 to 255. This range is derived from the possible combinations of eight bits (2^8 = 256 combinations).
+Example of IPv4 Address: 192.168.1.1
+192 is the first octet
+168 is the second octet
+1 is the third octet
+1 is the fourth octet
+Each part of the IP address can indicate various aspects of the network configuration, from the network itself to the specific device within that network. In most cases, the network part of the address is represented by the first one to three octets, while the remaining section identifies the host (device).
+
+
+➡️IPv6:
+IPv6 addresses were created to deal with the shortage of IPv4 addresses. They use 128 bits instead of 32, offering a vastly greater number of possible addresses. 
+These addresses are expressed as eight groups of four hexadecimal digits, each group representing 16 bits. The groups are separated by colons.
+
+Example of IPv6 Address: 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+ 
+ ----------------------------------------------------------------------------
+ 
+ Yes, the IP address of a device can change depending on several factors:
+
+Public IP Address (External)
+Dynamic IPs (Most Common for Home Users) – Internet Service Providers (ISPs) often assign dynamic IP addresses, which can change periodically 
+when the router reconnects or after a certain lease time.
+
+Restarting Router/Modem – Some ISPs assign a new IP if you restart your modem.
+
+Changing Networks – If you switch from Wi-Fi to mobile data or connect to a different Wi-Fi, your public IP changes.
+
+ISP Changes or Maintenance – Your ISP may change your IP address without notice.
+
+Using a VPN or Proxy – A VPN or proxy will mask your actual IP and assign a different one.
+
+
+AWS manages IP assignments, but:
+✅ Public IPv4 is dynamically assigned by AWS (unless you use an Elastic IP).
+✅ Private IPv4 remains fixed within the same instance lifecycle.
+✅ Elastic IP is managed by you and remains constant.
+✅ IPv6 is generally static and AWS-assigned.

@@ -1,0 +1,238 @@
+1. Git Setup & Configuration
+Check Git Version
+ 
+git --version
+✔️ Displays the installed Git version.
+
+Set User Information (Global)
+ 
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+✔️ Sets your Git username and email for commits.
+
+Check Git Configuration
+ 
+git config --list
+✔️ Shows current Git settings.
+
+2. Initialize & Clone Repository
+Initialize a Git Repository
+ 
+git init
+✔️ Creates a new Git repository in the current folder.
+
+Clone an Existing Repository
+ 
+git clone <repository_url>
+✔️ Copies a remote repository to your local machine.
+🔹 Example:
+
+ 
+git clone https://github.com/user/repo.git
+3. Staging & Committing Changes
+Check Repository Status
+ 
+git status
+✔️ Shows modified files and staging area status.
+
+Add Files to Staging Area
+ 
+git add <file>
+✔️ Stages a specific file for commit.
+🔹 Add all files:
+
+ 
+git add .
+Commit Changes
+ 
+git commit -m "Commit message"
+✔️ Saves changes in the repository with a message.
+
+4. Branching & Merging
+List All Branches
+ 
+git branch
+✔️ Shows all local branches.
+
+Create a New Branch
+ 
+git branch <branch-name>
+✔️ Creates a new branch.
+
+Switch to Another Branch
+ 
+git switch <branch-name>
+or
+
+ 
+git checkout <branch-name>
+✔️ Moves to the specified branch.
+
+Create & Switch to a New Branch
+ 
+git switch -c <branch-name>
+or
+
+ 
+git checkout -b <branch-name>
+Merge Branches
+ 
+git merge <branch-name>
+✔️ Merges the specified branch into the current branch.
+
+5. Working with Remote Repositories
+Add a Remote Repository
+ 
+git remote add origin <repository_url>
+✔️ Connects your local repository to a remote one.
+
+View Remote Repositories
+ 
+git remote -v
+✔️ Shows the remote repository URLs.
+
+Push Changes to Remote Repository
+ 
+git push -u origin <branch-name>
+✔️ Sends committed changes to GitHub.
+🔹 Example:
+
+ 
+git push -u origin main
+Pull Changes from Remote Repository
+ 
+git pull origin <branch-name>
+✔️ Fetches and merges remote updates.
+
+Fetch Changes (Without Merging)
+ 
+git fetch origin
+✔️ Downloads changes but does not apply them.
+
+6. Undoing Changes
+Undo Changes in a File (Before Staging)
+ 
+git checkout -- <file>
+✔️ Discards changes in a file before staging.
+
+Unstage a File (But Keep Changes)
+ 
+git reset <file>
+✔️ Removes a file from the staging area.
+
+Undo Last Commit (Keep Changes in Working Directory)
+ 
+git reset --soft HEAD~1
+✔️ Reverts the last commit but keeps changes staged.
+
+Undo Last Commit (Discard Changes Completely)
+ 
+git reset --hard HEAD~1
+✔️ Deletes the last commit and all changes.
+
+7. Logs & History
+View Commit History
+ 
+git log
+✔️ Shows a history of commits.
+
+View a Shorter Log Format
+ 
+git log --oneline
+✔️ Displays commits in a compact format.
+
+View Changes Between Commits
+ 
+git diff
+✔️ Shows differences in modified files.
+
+8. Stashing (Temporary Save)
+Stash Current Changes
+ 
+git stash
+✔️ Temporarily saves uncommitted changes.
+
+List Stashed Changes
+ 
+git stash list
+✔️ Shows all stashed changes.
+
+Apply the Most Recent Stash
+ 
+git stash pop
+✔️ Applies and removes the last stash.
+
+Apply a Specific Stash
+ 
+git stash apply stash@{n}
+✔️ Applies a specific stash without removing it.
+
+9. Deleting Branches
+Delete a Local Branch
+ 
+git branch -d <branch-name>
+✔️ Deletes a branch (if merged).
+🔹 Force delete without merging:
+
+ 
+git branch -D <branch-name>
+Delete a Remote Branch
+ 
+git push origin --delete <branch-name>
+✔️ Removes a branch from the remote repository.
+
+10. Reset & Revert
+Reset to a Specific Commit (Soft)
+ 
+git reset --soft <commit-hash>
+✔️ Moves to an earlier commit but keeps changes staged.
+
+Reset to a Specific Commit (Hard)
+ 
+git reset --hard <commit-hash>
+✔️ Completely erases history and resets to a previous commit.
+
+Revert a Commit (Create a New Undo Commit)
+ 
+git revert <commit-hash>
+✔️ Creates a new commit that undoes the previous one.
+
+11. Git Tags
+Create a Tag
+ 
+git tag -a v1.0 -m "Version 1.0 release"
+✔️ Tags a commit with a version label.
+
+List Tags
+ 
+git tag
+✔️ Shows all tags.
+
+Push Tags to Remote
+ 
+git push origin --tags
+✔️ Uploads tags to the remote repository.
+
+12. Git Ignore
+Ignoring Files & Folders
+Create a .gitignore file in the repository.
+
+Add file/folder names to ignore, e.g.:
+
+ba 
+node_modules/
+*.log
+.env
+Save and commit the .gitignore file.
+
+13. Git Rebase
+Rebase a Branch (Reapply Commits on a New Base)
+ 
+git rebase main
+✔️ Moves the current branch commits on top of main.
+
+14. Git Cherry-Pick (Apply Specific Commits to Another Branch)
+Cherry-Pick a Commit
+ 
+git cherry-pick <commit-hash>
+✔️ Applies a specific commit from one branch to another.
